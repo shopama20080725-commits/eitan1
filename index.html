@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss AV</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ホーム画面 -->
+    <div id="home">
+
+        <h1>Miss AV</h1>
+
+        <h2>範囲を選択</h2>
+
+        <button class="menuButton" data-range="801">
+            801～900
+        </button>
+
+        <button class="menuButton" disabled>
+            901～1000（準備中）
+        </button>
+
+        <button class="menuButton" disabled>
+            1001～1100（準備中）
+        </button>
+
+        <button class="menuButton" disabled>
+            間違えた問題だけ（準備中）
+        </button>
+
+        <button class="menuButton" disabled>
+            学習履歴（準備中）
+        </button>
+
+    </div>
+
+    <!-- クイズ画面 -->
+    <div id="quiz" class="hidden">
+
+    <button id="homeNowButton" class="homeButton">
+        🏠 ホームへ戻る
+    </button>
+
+    <div class="topBar">
+
+        <span id="questionCount"></span>
+        <span id="score"></span>
+
+    </div>
+            <span id="questionCount">
+                問題 1 / 100
+            </span>
+
+            <span id="score">
+                ⭕0 ❌0
+            </span>
+
+        </div>
+
+        <h2 id="question"></h2>
+
+        <div id="choices"></div>
+
+        <div id="message"></div>
+
+        <button id="nextButton" style="display:none;">
+            次の問題
+        </button>
+
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="resultScreen" class="hidden">
+
+        <h1>🎉 お疲れさまでした！</h1>
+
+        <div id="finalScore"></div>
+
+        <button id="restartButton">
+            もう一度挑戦
+        </button>
+
+        <button id="homeButton">
+            ホームへ戻る
+        </button>
+
+    </div>
+
+</div>
+
+<!-- 単語データ -->
+<script src="words801.js"></script>
+<script src="words821.js"></script>
+<script src="words841.js"></script>
+<script src="words861.js"></script>
+<script src="words881.js"></script>
+
+<!-- データ管理 -->
+<script src="data.js"></script>
+
+<!-- メイン処理 -->
+<script src="script.js"></script>
+
+</body>
+
+</html>
